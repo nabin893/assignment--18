@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Baner4 = ({ncd}) => {
+const Baner4 = ({ncd,removeHandel}) => {
     // console.log(ncd);
     
 
@@ -27,7 +27,7 @@ const Baner4 = ({ncd}) => {
                     </div>
                     
                     <div >
-                    <button className="btn btn-active btn-primary my-3">Remove AS Read</button>
+                <button onClick={()=>(removeHandel(ncd?.unique_id))} className="btn btn-active btn-primary my-3">Remove </button>
         
                     </div>
         

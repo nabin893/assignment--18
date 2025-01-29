@@ -1,7 +1,7 @@
 import React from 'react';
 import Baner4 from './Baner4';
 
-const Baner3 = ({NCardData,bookMark}) => {
+const Baner3 = ({NCardData,bookMark,removeHandel}) => {
     // console.log(bookMark);
     
    
@@ -16,7 +16,7 @@ const Baner3 = ({NCardData,bookMark}) => {
 
            <div>
             {
-                NCardData.map((ncd,index)=> <Baner4 ncd={ncd} key={index} ></Baner4>)
+                NCardData.map((ncd,index)=> <Baner4 ncd={ncd} key={index} removeHandel={removeHandel} ></Baner4>)
             }
            </div>
             
