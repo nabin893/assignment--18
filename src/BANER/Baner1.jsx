@@ -9,7 +9,7 @@ const Baner1 = () => {
     //    console.log(cardData);
 
     const [NCardData, setNCardData] = useState([])
-    //   console.log(NCardData);
+      console.log(NCardData);
 
     const [bookMark, setBookMark] = useState(0)
 
@@ -26,15 +26,16 @@ const Baner1 = () => {
         setNCardData(newData)
         setData(id.unique_id)
     }
-    // useEffect(() => {
-    //     const data = getData()
-    //     const mt = []
-    //     for (const da of data) {
-    //         const filData = cardData.find(idx => idx?.unique_id === da)
-    //         mt.push(filData)
-    //     }
-    //     setCardData(mt)
-    // }, [cardData])
+
+    useEffect(() => {
+        const data = getData()
+        const mt = []
+        for (const da of data) {
+            const filData = cardData.find(idx => idx?.unique_id === da)
+            mt.push(filData)
+        }
+        setNCardData(mt)
+    }, [cardData])
 
 
 // 2 bookmark click
@@ -46,16 +47,17 @@ const Baner1 = () => {
         setBookMark(bokMark)
         bokData(newBMark)    
     }
-useEffect(()=>{
-    const data =getData()
+// useEffect(()=>{
+//     const data =getData()
 
-},[])
+// },[])
 
 
   
 //  3 Remove  
    const removeHandel =(id)=>{
-    const newValu = NCardData.filter(idx=>idx !==id)
+    const newValu = NCardData.filter(idx=>idx.unique_id !== id)
+    console.log(newValu)
     removeData(id)
     setNCardData(newValu)
     // console.log(id);

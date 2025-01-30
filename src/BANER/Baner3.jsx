@@ -11,7 +11,7 @@ const Baner3 = ({NCardData,bookMark,removeHandel}) => {
         <div>
            <div>
                  <p className='text-3xl font-bold'>BOOLMARK</p>
-                <p className='text-2xl font-bold'>{bookMark}</p>
+                <p className='text-2xl font-bold'>{bookMark} min</p>
            </div>
 
            <div>
